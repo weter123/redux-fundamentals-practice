@@ -20,7 +20,9 @@ export const loggerMiddleware = (storeAPI) => (next) => (action) => {
   return result;
 };
 
-const alwaysReturnHellowMiddleware = (storeAPI) => (next) => (action) => {
+export const alwaysReturnHellowMiddleware = (storeAPI) => (next) => (
+  action
+) => {
   const result = next(action);
   console.log("hello");
   return "hello";

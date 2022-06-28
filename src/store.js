@@ -8,14 +8,16 @@ import {
   print1,
   print2,
   print3,
-  loggerMiddleware
+  loggerMiddleware,
+  alwaysReturnHellowMiddleware
 } from "./exampleAddons/middleware";
 
 const middlewareEnhancer = applyMiddleware(
   print1,
   print2,
   print3,
-  loggerMiddleware
+  loggerMiddleware,
+  alwaysReturnHellowMiddleware
 );
 const composedEnchancer = compose(
   sayHiOnDispatch,
