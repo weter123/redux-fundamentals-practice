@@ -1,4 +1,5 @@
-import { createStore, compose, applyMiddleware } from "redux";
+import { createStore, applyMiddleware } from "redux";
+import { composeWithDevTools } from "redux-devtools-extension";
 import {
   includeMeaningOfLife,
   sayHiOnDispatch
@@ -21,7 +22,7 @@ const middlewareEnhancer = applyMiddleware(
   alwaysReturnHellowMiddleware,
   delayedMessageMiddleware
 );
-const composedEnchancer = compose(
+const composedEnchancer = composeWithDevTools(
   sayHiOnDispatch,
   includeMeaningOfLife,
   middlewareEnhancer
