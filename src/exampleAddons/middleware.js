@@ -19,3 +19,9 @@ export const loggerMiddleware = (storeAPI) => (next) => (action) => {
   console.log("next state", storeAPI.getState());
   return result;
 };
+
+const alwaysReturnHellowMiddleware = (storeAPI) => (next) => (action) => {
+  const result = next(action);
+  console.log("hello");
+  return "hello";
+};
