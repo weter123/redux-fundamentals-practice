@@ -4,9 +4,19 @@ import {
   sayHiOnDispatch
 } from "./exampleAddons/enhancers";
 import rootRuducer from "./reducer";
-import { print1, print2, print3 } from "./exampleAddons/middleware";
+import {
+  print1,
+  print2,
+  print3,
+  loggerMiddleware
+} from "./exampleAddons/middleware";
 
-const middlewareEnhancer = applyMiddleware(print1, print2, print3);
+const middlewareEnhancer = applyMiddleware(
+  print1,
+  print2,
+  print3,
+  loggerMiddleware
+);
 const composedEnchancer = compose(
   sayHiOnDispatch,
   includeMeaningOfLife,
