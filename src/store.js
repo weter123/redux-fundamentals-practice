@@ -9,7 +9,8 @@ import {
   print2,
   print3,
   loggerMiddleware,
-  alwaysReturnHellowMiddleware
+  alwaysReturnHellowMiddleware,
+  delayedMessageMiddleware
 } from "./exampleAddons/middleware";
 
 const middlewareEnhancer = applyMiddleware(
@@ -17,7 +18,8 @@ const middlewareEnhancer = applyMiddleware(
   print2,
   print3,
   loggerMiddleware,
-  alwaysReturnHellowMiddleware
+  alwaysReturnHellowMiddleware,
+  delayedMessageMiddleware
 );
 const composedEnchancer = compose(
   sayHiOnDispatch,
