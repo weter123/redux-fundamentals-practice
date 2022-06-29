@@ -13,7 +13,7 @@ function App() {
         </section>
       </nav>
       <section>
-        <h2>Welcome to the Redux Fundamentals example app!</h2>
+        <h2>Todos</h2>
       </section>
     </div>
   )
