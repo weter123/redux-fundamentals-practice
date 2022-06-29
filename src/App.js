@@ -1,6 +1,6 @@
 import React from "react";
 import Header from "./features/Header/Header";
-
+import Footer from "./features/Footer/Footer";
 function App() {
   return (
     <div className="App">
@@ -16,6 +16,8 @@ function App() {
       <section>
         <h2>Todos</h2>
         <Header />
+
+        <Footer />
       </section>
     </div>
   );
