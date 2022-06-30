@@ -1,5 +1,6 @@
 import React from "react";
 import Header from "./features/Header/Header";
+import TodoList from "./features/todos/TodoList";
 import Footer from "./features/Footer/Footer";
 function App() {
   return (
@@ -16,7 +17,7 @@ function App() {
       <section>
         <h2>Todos</h2>
         <Header />
-
+        <TodoList />
         <Footer />
       </section>
     </div>
