@@ -14,10 +14,7 @@ export default function filtersReducer(state = initialState, action) {
     case "filiters/statusFilterChanged": {
       return {
         ...state,
-        filters: {
-          ...state.filters,
-          status: action.payload
-        }
+        status: action.payload
       };
     }
     case "filters/colorFilterChanged": {

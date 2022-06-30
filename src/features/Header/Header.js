@@ -10,10 +10,10 @@ function Header() {
   };
   const onHandleKeyDown = (e) => {
     const trimmedText = text.trim();
-    if (trimmedText && e.key === "Enter") {
+    if (trimmedText && e.which === 13) {
       dispatch({ type: "todos/todoAdded", payload: trimmedText });
+      setText("");
     }
-    setText("");
   };
   return (
     <div>
